@@ -1,0 +1,574 @@
+----------------------------------------------------------------
+HTML (Hyper text Markup language) 
+----------------------------------------------------------------
+
+-> It has collections of pre-defined tags.
+-> html tags are used to create basic structure of webpage.
+-> It is used to collect information from the user and used to display information to the user via web browser.
+-> HTML tags have limited property and values, due to this we require css for responsive webpage design.
+
+
+Responsive webpage = HTML (tags) + CSS (Property and values)
+
+Responsive webpages -> Those webpages that should work in all size of screen.
+
+---------------------------------------------------------------
+
+HTML tags:
+
+    <> open tag
+    </> close tag
+
+---------------------------------------------------------------
+
+Different names of html tags ?
+	
+		<></> - html - tag
+		<></> - css  - all HTML tags are called as selector in CSS
+		<></> - javascript - all HTML tags are called as Element in JS
+		<></> - React - all HTML tags + User defined tags are called JSX Element in React
+
+------------------------------------------------------------------
+
+Type of HTML tags:
+
+		1. input tags  - it use to collect information from user
+		2. output tags - it use to display information to the user
+	
+	Structure of html tags:
+		3. dependent - element 
+		  => those tags that open and close seperatly
+		     Example 
+				<html>
+				<body></body>
+				</html>
+				
+		4. independent element / self closing tag
+		  => Those tags that open and close together
+		  
+			Example 
+				<br />
+				<hr />
+				
+
+	Behavior of html tags:
+		5. Block Level Element 
+			=>Those tags, that print statement in new line by default
+			
+		6. Inline Element
+			=>Those tags, that print statement in same line (side by side) by default
+			
+		Note - Using CSS 
+			   1. Block level element =>convert =>inline
+			   2. inline element =>convert =>block level element
+
+
+---------------------------------------------------------------
+Tags in Head section of HTML Doc:
+------------------------------------------------------------------------------------------------------------------------------------------
+<title></title> : defines the title of the webpage
+<style></style> : used to add CSS to the webpage (internal CSS)
+<link rel="stylesheet" href=""> : rel represent relation and href is used to add a path or link 
+
+<meta charset="UTF-8"> : Used to define the character encoding for an HTML document. 
+                         It tells the web browser how the characters within the document should be interpreted and displayed.
+                         UTF-8 stands for "Unicode Transformation Format - 8-bit"
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> : this is for mobile device
+<meta name="keywords" content="html,web"> : 
+<meta name="description" content="this is a web page tutorial"> :
+<meta http-equiv="refresh" content="30"> : used to refresh the webpage every 30 sec html
+
+<script></script> : used to add JS code
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+--> Heading Element:
+
+	<h1> Hello World </h1>
+
+	<h1> </h1> : It is a tag (dependent)
+	Hello World : It is the content
+
+	Together both tag and content is called an Element.
+
+
+---------------------------------------------------------------
+
+--> Self closing tags: (Void elements)
+
+<hr /> : Horizontal rule ( Horizontal Line )
+<br /> : Break
+
+
+ -- non void elements always have content inside the tag.
+ -- Whereas for void element it is forbidden to put any content inside the tag.
+	
+Example: <hr size="10" color="red" />
+
+---------------------------------------------------------------
+
+<!DOCTYPE html> : informs to complier that this document contains HTML5 Tags.
+
+-- All pages should begin with <!DOCTYPE html>. This special string is known as a declaration 
+   and ensures the browser tries to meet industry-wide specifications.
+
+
+---------------------------------------------------------------
+
+What is valid extension of HTML file ? 
+    -> .HTML  (SEO friendly, best for Digital marketing)
+    -> .htm 
+
+NOTE: While naming a HTML file or folder, do not use white space.
+--------------------------------------------------------------
+Structure of HTML Document ?
+
+    ->html
+        ->head
+            ->page settings
+            ->marketing section (digital marketing) + Analytics + Other configuration
+            ->library section (CSS, JS other Libraries)
+             
+        ->body
+            ->contents with suitable tags (all the information for the user)
+--------------------------------------------------------------
+While creating webpage follow these rules:
+
+1. The tag open first should get closed last.
+2. The tag open last should get closed first.
+--------------------------------------------------------------
+List of tag (elements) in HTML:
+--------------------------------------------------------------
+
+1. h1 to h6 -> used to create headline of the webpage.
+Use h1 min and max 1 time in each webpage for better user experience and contents accessibility.
+
+2. <p> -> use the p tag to display paragraphs like more than 130 characters.
+
+3. <b> -> Bold the text (to make a string bold)
+
+4. <br/> -> tag inserts a single line break.
+
+5. <body bgcolor="red"> </body> -> inside body tag bgcolor is the property used to give color to the background page.
+
+6. <label> </label> -> Used to print text in "inline" format.
+
+	-> Example:         <label> Bangalore </label>
+        		        <label> Chennai </label>
+
+7. <u> </u> -> underline text tag
+
+8. <i> </i> -> Italic the text (to make a string Italic)
+
+9. <marquee> </marquee> -> this tag helps us to move the texts in an HTML page. (default text moves from right to left)
+
+    attributes of marquee : 1. direction="right" -- text moves from left to right
+                            2. scrollamount="10" -- it decides the speed of the moving text (increasing number = more speed )
+                            3. onmousemove="this.stop()" -- once mouse pointer is on the text the movement of text stops
+                            4. onmousemove="this.start()" -- once mouse pointer moves away the movement of text starts again
+                            5. behavior="alternate" -- text will reach the end of the screen and move back in opposite direction.
+
+10. <form> </form> -> used to create forms.
+
+11. <font> </font>- It changes font size and color of the text
+
+        -> <font color ="name of the color" size ="size of the text"> insert your text here </font> :: this tag is used to color the 
+        text in HTML without CSS.
+
+        -> style="font-family:consolas" :: it is used to change the text type into various fonts.
+
+        size property varies from 1(Min) to 7(Max) numbers.
+        NOTE: In the above context font is a tag and color and size are the property.
+
+12. <div> </div> - It acts like a container
+
+13. <center> </center>: this tag helps all data to print in the center of the screen
+
+14. <frameset> </frameset>: it is used to merge and frame multiple html pages in a single web page.
+                        Refer HTML-Project for the same. (IMP)
+
+-------------------------------------------------------------
+
+Types of List in HTML:
+
+1. <ol> -> Order List 
+    type="1"
+    type="A"
+    type="a"
+    type="i"
+    type="I"
+
+    Ex:   <ol type="1" start="2">
+
+    type defines the number system and start represents that numbering should begin from 2 (not from 1).
+
+    Attribute for lists:
+
+    1. reversed=true  : list begins with reversed
+
+2. <ul> -> Unorder List 
+    type="disc"    
+    type="square"      
+    type="circle"
+    type="none"
+
+
+
+3. <dl> -> definition list  
+    
+    -> dt (definition title) : It is used to create headline of a topic   
+
+    -> dd (definition details) : It is used to display details of the topic  
+
+---------------------------------------------------------------
+
+Nested List and Indentation:
+
+Example:     
+<body>
+        <ul type="circle">
+            <li> Apple</li>
+            <li> Mango 
+                <ol>
+                    <li> New </li>
+                    <li> Old </li>
+                </ol>
+
+            </li>
+
+
+        </ul>
+    </body>
+      
+-------------------------------------------------------------
+
+How to link Html Pages ?
+
+    <a href="" title="" target=""> text to link </a>
+
+    <tag attribute="value" attribute="value">content<tag>
+
+    a -> tag name (anchor tag)
+    href -> property name used to set path for next page
+    title -> it is for google search and digital marketing (SEO purpose)
+    target -> it set the location where next page will open. It is of 7 types but only 5 are useful.
+
+    attribute -> href="http://wwww.google.com"
+
+
+    Some list of attributes: 
+    1. draggable=true
+
+link1.html and link2.html files are created to understand this with an example.
+
+
+Types of target ?
+
+    1. target="_self" -> means the next page will open in the same tab. (default target)
+    2. target="_new" -> next page will open in new tab, but only 1 click
+    3. target="_blank" -> next page will open in new tab, but for every click
+    
+login.html and register.html are created to understand this with an example.
+
+	target="_child" - it open popup window on top of current window (need JS)
+	target="_parent" - user will iteract in child window, it reflect in parent (JS)
+
+
+    target="userdefined" : will be used if needed in JS (we will create our own)
+-------------------------------------------------------------
+
+Image Element:
+
+1. <img src="url" />
+
+2. <img src="url" alt=" forest at sunset" />
+
+        alt - its an attribute for alternate description
+
+3. <img src="url" alt=" forest at sunset" width="100px" height="100px" />
+
+
+        Height and width are attributes used to resize an image on webpage.
+-------------------------------------------------------------
+
+Table in HTML 
+
+Structure: 
+
+    1st method: (html4)
+    -> table    
+        -> caption (title of the table)
+        -> tr (table row)
+            -> th (table heading)
+            -> td (table data)  
+
+    2nd method: (html5)
+    -> table
+        -> thead : it covers top section of the table
+            -> tr
+                -> th
+        -> tbody: it covers middle section of the table
+            -> tr
+                ->td
+        -> tfoot: it covers bottom section of the table
+            -> tr
+                -> th    
+
+    Example : table5.html
+-----------------------------------------------------------------
+
+List of Properties and Values in table, tr, th, td :
+
+	-> align (left,center,right) - default is left
+	-> valign (top, middle, bottom) - default is middle
+	-> border
+	-> bordercolor (eg: bordercolor="green")
+	-> cellpadding - it apply space inside th,td 
+	-> cellspacing - it apply a space outside of th,td
+	-> height (eg: height="50%")
+	-> width (eg: width="70%")
+	-> colspan  - it is used to combine a space of 2 or more th,td
+	-> rowspan - it is used to combine a space of 2 or more tr
+	-> bgcolor - it set background color (table, tr , th ,td and body)
+
+
+Example file is table1.html, table2.html and table3.html
+
+-----------------------------------------------------------------
+
+List of Input tags :
+
+    -> text : used to take input in alpha numeric format 
+    -> number: used to take number input from user
+    -> password: used to take secure input from user
+    -> email: used to take email as input
+        size="40"
+    -> file : used to upload any type of file
+    -> date: used to choose date from date-picker
+    -> datetime-local : to choose date with local time zone
+    -> textarea: used for multi line input
+       rows="10"
+       cols="40"
+    -> checkbox : used to choose one or more from given option
+    -> radio : used to choose any one from given option
+    -> select : to choose any option from drop-down
+    -> button : -> submit  
+                -> reset  
+                -> button 
+                -> style="background-color:green" ->to change the background color of the button.
+
+                Ex: style="background-color:green; color:white -> here the box coloe will be green with white text.
+
+    -> <input type="hidden">   -  defines a hidden input field (not visible to a user).
+
+    -> <input type="search">  -  is used for search fields (a search field behaves like a regular text field).
+
+    -> <input type="url">  -  is used for input fields that should contain a URL address. 
+                              Depending on browser support, the url field can be automatically validated when submitted.
+
+    -> <input type="reset">   - defines a reset button that will reset all form values to their default values.
+
+-----------------------------------------------------------------
+
+List of property in input elements: [form3.html]
+
+
+    -> placeholder - it is for user guidance
+    -> size - it is used to resize width of text, email and password
+    -> rows - it is used to resize height of textarea
+    -> cols - it is used to resize width of textarea
+    -> maxlength - it is used to set limit for input field in text, email, textarea and password
+    -> value - it is used to display default value under input elements
+    -> readonly - it makes input elements readonly (non-editable), but it will communicate with backend
+    -> disabled - it makes input element locked (non-editable), it will not communicate with backend
+    -> tabindex - it is used to set the sequence for cursor pointer (both input and output elements)
+    -> required - it will be textmake compulsory to fill for the user to submit the data
+    -> The input "min and max" attributes specify the minimum and maximum values for an input field. 
+       The min and max attributes work with the following input types: number, range, date, datetime-local, month, time
+    -> The input "multiple" attribute specifies that the user is allowed to enter more than one value in an input field.
+       The multiple attribute works with the following input types: email, and file.
+    -> The input "autocomplete" attribute specifies whether a form or an input field should have autocomplete on or off.
+    
+----------------------------------------------------------------
+
+List of property in form : [form3.html]
+
+    -> action - it is used to set path for backend, where we need to send the data
+    -> method - it is used to set the type of communicaion as follows
+        -> get  : it sends data to backend via browser URL, fully visible, unsecure.
+        -> post : it sends data to backend hidden, not visible, fully secure.
+
+    -> name - it define a container in input tags to recieve value given by user.
+
+
+    1. <details>  <summar> Read More...</summar>  </details>
+
+-----------------------------------------------------------------
+Additional information ::
+-----------------------------------------------------------------
+ 
+---> Right click > Format document > the code will be alligned properly in VSCODE
+
+<!--    hello -->  : this is how we comment  in HTML
+
+----------------------------------------------------------------------
+
+--> asynchronous: without refreshing full page data on the page will change on some section.
+
+-----------------------------------------------------------------------
+
+Keypoints:
+
+-- <figure> </figure> :The figure element represents self-contained content and will allow you to 
+                     associate an image with a caption.
+
+
+-- <figcaption> </figcaption> :A figure caption (figcaption) element is used to add a 
+                            caption to describe the image contained within the figure element. 
+                            For example, <figcaption>A cute cat</figcaption> adds the caption A cute cat.
+
+-- <em> </em> : Emphasize the word love in the figcaption element by wrapping 
+             it in an emphasis em element. (It is same as Italic element).
+
+-- <strong> </strong> : The strong element is used to indicate that some text is 
+                    of strong importance or urgent. (It is same as bold element).
+
+-- In <form> </form>
+    The "action" attribute indicates where form data should be sent. 
+    For example, <form action="/submit-url"></form> tells the browser that the 
+    form data should be sent to the path /submit-url.
+
+--  In order for a form's data to be accessed by the location specified in the "action" attribute, 
+    you must give the text field a "name" attribute and assign it a value to represent the data being submitted. 
+    For example, you could use the following syntax for an email address text field: <input type="text" name="email">.
+
+--  label elements are used to help associate the text for an input element with the input element 
+    itself (especially for assistive technologies like screen readers). 
+    For example, <label><input type="radio"> cat</label> makes it so clicking the word cat also selects the corresponding radio button.
+
+--  The id attribute is used to identify specific HTML elements. Each id attribute's value 
+    must be unique from all other id values for the entire page.
+    eg:    <label><input id="indoor" type="radio"> Indoor</label>
+
+--  <fieldset> </fieldset>
+    The fieldset element is used to group related inputs and labels together in a web form. 
+    fieldset elements are block-level elements, meaning that they appear on a new line.
+
+--  The legend element acts as a caption for the content in the fieldset element. It gives 
+    users context about what they should enter into that part of the form.
+    eg: <legend>Is your cat an indoor or outdoor cat?</legend>
+
+--  There's another way to associate an input element's text with the element itself. 
+    You can nest the text within a label element and add a for attribute with the same value as the input element's id attribute.
+
+
+------------------------------------------------------------------------------------
+
+Bioler Plate code :
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        
+    </body>
+    </html>
+
+--------------------------------------------------------------------------------------
+HTML 5 tags:
+--------------------------------------------------------------------------------------
+
+>   <abbr title="Rohith Patil">RP</abbr>    > with this tag we can mark abbrevations
+
+>   <p> Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy text </p>   > This tag is used to define a keyboard input. This tag will simply add a 
+						                                          Monospace font to the text inside, giving a more distinctive look.
+
+
+>   <p> The CSS <code>background-color</code></p>    > this tag is used to mark any kind of snippet on your page.
+
+>   <p> <samp>Please Enter to continue</samp> </p>   > Used to define a sample of a computer program.
+
+>   <small> This text is small </small>   > used to make text a little small and mark it as less important.
+
+>   <span></span>    > If we need to seperate a part of text so that we can style it in CSS, it is best to use this tag.
+
+>   <p> 24456 <sup> 234 </sup> </p>   > We can use this to move the text half way up.  (superscript)
+
+>   <p> 24456 <sub> 234 </sub> </p>   > We can use this to move the text half way down.  (subscript)
+
+
+>   <address>
+        Written by <a href="hhh3.html">Jos Buttler</a> <br>
+        Visit Us: <br>
+        Conatct Us: <br>
+        Email Us:
+    </address>                      > Used to mark information for the author of the document.
+
+
+>   <dfn>HTML</dfn> is a markup language     > Used to mark a definition that will later be defined in the content.
+
+>   Don't forget to fasten your <mark>seatbelt</mark>  > Will highlight the text inside of it with a yellow background.
+
+>   <pre>
+        This is a message    being delivered
+        on
+
+        time.
+    </pre>                       >Used when we need to preserve spaces or line breaks in your text
+
+
+
+    <!--Semantic HTML Elements-->
+    <header></header>
+    <nav></nav>
+    <main></main>
+    <section></section>
+    <article></article>
+    <aside></aside>
+    <footer></footer>
+
+
+>   <span>Meter reading:</span>
+  <meter value="52" min="0" max="100"></meter>     >  Used to display a measurement of data within given range.
+
+>   <span>Loading:</span>
+  <progress min="0" max="100"> 39 </progress>     > you to visualize the progress of a task on page. Basically a loading bar we see in video games and
+						    other websites.
+
+>   <noscript>Sorry your browser do not support javascript.</noscript>    > used when we can place some text that we want to appear if user's browser 
+									                                      does not support scripts, or if user himself disabled scripts on his browser.
+
+>   <template>
+        <h1>There are some details in progress</h1>
+        <p>Read more</p>
+    </template>                                     > Inside this tag we can place any HTML code that we want to hide from screen when page loads.
+                                                      The hidden content can later be made visible when needed in JS.
+
+>   <dailog></dailog>              > It is used as an absolute positioned element, meaning its not part of the natural flow of the page layout. 
+                                     It will be centered on screen and it will overlap any existing content around it
+
+>   <input type="month"> , <input type="week">, <input type="time">
+
+>   <input type="range">        > Defines a an input field which gives a neat functional slider with which user can select a value within a given range.
+
+>   <audio controls> <source src="URL or path" type="audio/mp3"/> </audio>    > This tag defines an audio player. 
+
+>   <video width="500" height="280" controls> <source src="URL or path" type="video/mp4"/> </video>   > This tag defines an video player. 
+
+>   <video width="500" height="280" controls> 
+	<source src="URL or path" type="video/mp4"/> 
+	<track 
+		src="path where .vtt subtitle file is stored" 
+		kind="subtitles"
+		srclang="en"
+		label="English">
+	</video>                    > Using this we can add subtilte option to video player.
+
+
+
+>   FYI, style and link tags are always written inside head tag.
+
+---------------------------------------------------------------------------------------------------------------------

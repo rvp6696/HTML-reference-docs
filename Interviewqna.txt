@@ -1,0 +1,271 @@
+----------------------------------------------------------
+What is the relation between webbrowser and html?
+
+The purpose of a web browser (Chrome, Edge, Firefox, Safari) is to read HTML documents and display them correctly.
+A browser does not display the HTML tags, but uses them to determine how to display the document.
+
+----------------------------------------------------------
+
+There are two ways to specify the URL in the src attribute:-
+
+Absolute URL – Links to an external image that is hosted on another website. 
+Example: src=”https://www.w3schools.com/images/img_girl.jpg”.
+Notes: External images might be under copyright. If you do not get permission to use it, you may be in violation of copyright laws. 
+In addition, you cannot control external images; it can suddenly be removed or changed.
+
+Relative URL – Links to an image that is hosted within the website. Here, the URL does not include the domain name. 
+
+If the URL begins without a slash, it will be relative to the current page. 
+Example: src=”img_girl.jpg”. 
+If the URL begins with a slash, it will be relative to the domain. 
+Example: src=”/images/img_girl.jpg”.
+
+Tip: It is almost always best to use relative URLs. They will not break if you change domain.
+
+----------------------------------------------------------
+
+HTMl Formatting elements :-
+
+Formatting elements were designed to display special types of text. HTML Formatting is a process of formatting text for better look and feel.
+In HTML the formatting tags are divided into two categories:
+
+1. Physical tag: These tags are used to provide the visual appearance to the text. 
+Example:
+
+<b> – It is used to bold the text written between it.
+
+<i> – It is used to make text italic.
+
+2. Logical tag: These tags are used to add some logical or semantic value to the text.. 
+Example:
+
+<strong> – It looks like bold text but tells the browser that the text is important.
+
+<em> – It is used to display content in italic but it tells the browser that the text is emphasized.
+
+<mark> – Marked text or used to highlight text.
+<small> – Smaller text
+<del> – This tag is used to display the deleted content.
+<ins> – Inserted text. This tag displays the content which is added.
+<sub> – It displays the content slightly below the normal line.
+<sup> – It displays the content slightly above the normal line.
+<u> – This tag is used to underline text written between it.
+
+----------------------------------------------------------
+
+What is div element.
+
+The <div> element is often used as a container for other HTML elements.
+
+---------------------------------------------------------
+
+What is  HTML layout elements ?
+
+HTML has several semantic elements that define the different parts of a web page:
+<header> – Defines a header for a document or a section
+<nav> – Defines a set of navigation links
+<section> – Defines a section in a document
+<article> – Defines an independent, self-contained content
+<aside> – Defines content aside from the content (like a sidebar)
+<footer> – Defines a footer for a document or a section
+
+<details> – Defines additional details that the user can open and close on demand
+<summary> – Defines a heading for the <details> element.
+
+-----------------------------------------------------------
+
+Explain Sematic and Non-Sematic elements.
+
+A semantic element clearly describes its meaning to both the browser and the developer. 
+Otherwise its non-sematic elements. 
+Example for sematic is form,header,p,h1-h6,footer etc and for nonsematic is div, span etc.
+
+--------------------------------------------------------------
+
+Explain <figure> and <figcaption>  elements.
+
+The figure tag is used to semantically organize the content of images, videos, audios or even charts or tables, block of codes in the HTML document. 
+The image tag is used to add an image to an HTML page. <img> tag can only insert image.
+
+The <figcaption> tag defines a caption for a <figure> element. 
+The <figcaption> element can be placed as the first or as the last child of a <figure> element.
+
+
+<figure>
+  <img src=”pic_trulli.jpg” alt=”Trulli”>
+  <figcaption>Fig1. – Trulli, Puglia, Italy.</figcaption>
+</figure>
+
+--------------------------------------------------------------
+
+Explain HTML Entities.
+
+HTMLCharacter entities are used to display reserved characters in HTML.
+Symbols(mathematical, technical, and currency symbols) that are not present on your keyboard can also be added by using entities.
+If we use the charecters directly {less than (<) or greater than (>) signs} in our text, the browser might mix them with tags. 
+
+Advantage of using an entity name: An entity name is easy to remember.
+Disadvantage of using an entity name: Browsers may not support all entity names, but the support for entity numbers is good.
+
+To display a less than sign (<) we must write: &lt; or &#60; for(>), use &gt/&#62, for &,use &amp/&#38,for””,use &quot/&#34 etc
+
+--------------------------------------------------------------
+
+Explain different attributes of HTML Form Element.
+
+The action attribute defines the action to be performed when the form is submitted. 
+Usually, the form data is sent to a file on the server when the user clicks on the submit button. 
+If the action attribute is omitted, the action is performed to the current page. <form action=”/action_page.php”>
+
+The target attribute specifies where to display the response that is received after submitting the form. 
+The target attribute can have one of the following values:
+_self which means that the response will open in the current window.
+_blank which means that the response will open in the new window or tab.
+_parent which means that the response will open in parent frame.
+_top which means that the response will open in the full body of the window.
+
+The method attribute specifies the HTTP method to be used when submitting the form data. 
+The form-data can be sent as URL variables (with method="get"{Default HTTP method}) or as HTTP post transaction (with method="post").
+<form action=”/action_page.php” method=”post”>
+
+The autocomplete attribute specifies whether a form should have autocomplete on or off. 
+When autocomplete is on, the browser automatically complete values based on values that the user has entered before. 
+<form action=”/action_page.php” autocomplete=”on”>
+
+The novalidate attribute is a boolean attribute. When present, it specifies that the form-data (input) should not be validated when submitted. 
+<form action=”/action_page.php” novalidate>
+
+-------------------------------------------------------------------------
+
+What is <map> element.
+
+The HTML <map> tag defines an image map. An image map is an image with clickable areas. 
+The areas are defined with one or more <area> tags.
+
+     <img src=”workplace.jpg” alt=”Workplace” usemap=”#workmap”>
+ 
+     <map name=”workmap”>
+     <area shape=”rect” coords=”34,44,270,350″ alt=”Computer” href=”com  puter.htm”>
+     <area shape=”rect” coords=”290,172,333,250″ alt=”Phone” href=”phone.htm”>
+    <area shape=”circle” coords=”337,300,44″ alt=”Coffee” href=”coffee.htm”>
+    </map>
+
+-------------------------------------------------------------------------
+
+When to use <picture> element.
+
+The <picture> element contains one or more <source> elements, each referring to different images through the srcset attribute. 
+This way the browser can choose the image that best fits the current view and/or device.
+
+<picture>
+  <source media=”(min-width: 650px)” srcset=”img_food.jpg”>
+  <source media=”(min-width: 465px)” srcset=”img_car.jpg”>
+  <img src=”img_girl.jpg”>
+</picture>
+
+-------------------------------------------------------------------------
+
+What is Favicon..
+
+A favicon is a small image displayed next to the page title in the browser tab. 
+add a <link> element to your “index.html” file, after the <title> element, like this.
+<link rel=”icon” type=”image/x-icon” href=”/images/favicon.ico”>
+
+-------------------------------------------------------------------------
+
+What is span element.
+
+The <span> element is an inline container used to mark up a part of a text, or a part of a document.
+When used together with CSS, the <span> element can be used to style parts of the text.
+The <span> element has no required attributes, but style, class and id are common.
+
+-------------------------------------------------------------------------
+
+Explain Difference between http method get and post.
+
+Appends(LINKS) the form data to the URL, in name/value pairs. 
+When use the get method, the submitted form data is visible in the URL!. 
+The length of a URL is limited (2048 characters). 
+
+GET is good for non-secure data, like query strings in Google. 
+It is useful for form submissions where a user wants to bookmark the result
+Appends the form data inside the body of the HTTP request. 
+
+When use the post method, the submitted form data is not shown in the URL. 
+The length of a URL is unlimited. POST is good for secure data. 
+It can be used to send large amounts of data. 
+The post method is used for form submissions but here user cannot bookmarked the result.
+
+The http Request Body is where we put additional information that we are going to send to the server. 
+In the body of the request we are free to place virtually whatever we want. 
+From the username and password of a person trying to login to our system, to the answers of a complex form of a survey.
+
+-------------------------------------------------------------------------
+
+Explain Label element.
+
+The <label> tag defines a label for many form elements.
+The <label> element is useful for screen-reader users, because the screen-reader will read out 
+loud the label when the user focus on the input element.
+The <label> element also help users who have difficulty clicking on very small regions (such as radio buttons or checkboxes) – 
+because when the user clicks the text within the <label> element, it toggles the radio button/checkbox.
+The for attribute of the <label> tag should be equal to the id attribute of the <input> element to bind them together.
+
+-------------------------------------------------------------------------
+
+Explain Fieldset and Legend element.
+
+The <fieldset> element is used to group related data in a form.
+The <legend> element defines a caption for the <fieldset> element.
+
+--------------------------------------------------------------------------
+
+Explain datalist element.
+
+The <datalist> element specifies a list of pre-defined options for an <input> element. 
+Users will see a drop-down list of the pre-defined options as they input data.
+The list attribute of the <input> element, must refer to the id attribute of the <datalist> element.
+
+<form action=”/action_page.php”>
+  <input list=”browsers”>
+  <datalist id=”browsers”>
+    <option value=”Internet Explorer”>
+    <option value=”Firefox”>
+    <option value=”Chrome”>
+    <option value=”Opera”>
+    <option value=”Safari”></datalist> </form>
+
+--------------------------------------------------------------------------
+
+Explain HTML Video Elements.
+
+The HTML <video> element is used to show a video on a web page.
+The controls attribute adds video controls, like play, pause, and volume.
+It is a good idea to always include width and height attributes. 
+If height and width are not set, the page might flicked while the video loads.
+
+The <source> element allows you to specify alternative video files which the browser may choose from. 
+The browser will use the first recognized format.
+The text between the <video> and </video> tags will only be displayed in browsers that do not support the <video> element.
+<video width=”320″ height=”240″ controls>
+  <source src=”movie.mp4″ type=”video/mp4″>
+  <source src=”movie.ogg” type=”video/ogg”>
+Your browser does not support the video tag.
+</video>
+
+To start a video automatically, use the autoplay attribute:
+<video width=”320″ height=”240″ autoplay>
+
+--------------------------------------------------------------------------
+
+Explain HTML Audio Elements.
+
+The HTML <audio> element is used to play an audio file on a web page. And expl is same as Videos
+
+<audio controls>
+  <source src=”horse.ogg” type=”audio/ogg”>
+  <source src=”horse.mp3″ type=”audio/mpeg”>
+Your browser does not support the audio element.
+</audio>
+
+----------------------------------------------------------------------------
